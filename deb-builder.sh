@@ -1,7 +1,5 @@
 #!/bin/bash
 
-VERSION="0.1.0"
-
 # Any packages specified here will be installed if not installed already.
 DEPENDS="dpkg-dev"
 
@@ -27,6 +25,9 @@ function ctrl_c() {
 }
 # Have the ctrl_c function run if ctrl+c is pressed
 trap "ctrl_c" 2
+
+echo "deb-builder.sh: script to create a deb file."
+echo "by @ryanfortner on GitHub"
 
 if [ "$EUID" = 0 ]; then
   error "This script can't be run with root."
