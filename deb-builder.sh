@@ -100,7 +100,7 @@ Priority: ${PRIORITY}
 Section: ${SECTION}
 Recommends: ${RECOMMENDS}
 Conflicts: ${CONFLICTS}
-Package: ${PACKAGE}" > DEBIAN/control
+Package: ${PACKAGE}" > control
 
 sudo chmod 775 control || error "Failed to change control file permissions!"
 
