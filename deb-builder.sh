@@ -74,7 +74,7 @@ elif [[ "$CONTINUE" == 0 ]]; then
 fi
 
 echo "Creating control file."
-read -rp "Maintainer? Usually this is in the form of Name <name@gmail.com> " MAINTAINER
+read -rp "Maintainer? (Usually this is in the form of 'Name <name@gmail.com>') " MAINTAINER
 read -rp "Short summary? " SUMMARY
 read -rp "Name? Usually this is the package name. " NAME
 read -rp "Description? " DESCRIPTION
