@@ -36,8 +36,8 @@ mkdir -p $DATA_DIR
 
 # ask user to input the directory with the files. 
 # the directory should not cointain a DEBIAN folder or a control file, only the files desired for the deb.
-read -rp "Enter the full directory with the desired contents for the deb: " DIRECTORY
-if [ ! -d "$DIRECTORY" ]; then
+read -rp "Enter the full directory with the desired contents for the deb: " DIRECTORYB
+if [ ! -d "$DIRECTORYB" ]; then
     error "Sorry, that directory can't be located. Try running the script again."
 else
     echo "continuing."
@@ -54,7 +54,7 @@ mkdir $NOWDAY || error "Failed to make $NOWDAY directory."
 cd $NOWDAY
 
 # copy contents from source folder into the deb-builder/data/nowday folder
-cp ${DIRECTORY}/* . || sudo cp ${DIRECTORY}/* .
+cp -r ${DIRECTORYB}/* . || sudo cp -r ${DIRECTORYB}/* .
 
 echo "Review the contents of the folder. If it's not correct, answer 'n'. If the contents are correct, answer 'y'."
 echo ""
