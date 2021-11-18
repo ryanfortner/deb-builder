@@ -82,6 +82,7 @@ read -rp "License? (example: gpl) " LICENSE
 read -rp "Architecture? (armhf, all, arm64, etc.) " ARCHA
 read -rp "Provides? (what packages does this package provide) " PROVIDES
 read -rp "Priority? (usually 'optional') " PRIORITY
+read -rp "Depends? (packages needed to install/run) " DEPENDSAB
 read -rp "Recommends? (packages suggested to install but not required) " RECOMMENDS
 read -rp "Conflicts? (packages that can't be alongside this package) " CONFLICTS
 read -rp "Package? (should be the same as the name in most cases) " PACKAGE
@@ -97,6 +98,7 @@ License: ${LICENSE}
 Architecture: ${ARCHA}
 Provides: ${PROVIDES}
 Priority: ${PRIORITY}
+Depends: ${DEPENDSAB}
 Section: ${SECTION}
 Recommends: ${RECOMMENDS}
 Conflicts: ${CONFLICTS}
@@ -128,7 +130,7 @@ DEBDIR="$(pwd)"
 
 read -rp "Name of the deb file? (ex: helloworld_0.1.0_armhf.deb) " DEBNAME
 
-echo "QEMU deb will be built at $DEBDIR"
+echo "Your deb will be built at $DEBDIR"
 
 echo "Building deb..."
 dpkg-deb --build $NOWDAY/ ${DEBNAME} || error "Failed to create "
