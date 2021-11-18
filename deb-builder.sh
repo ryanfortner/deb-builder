@@ -41,7 +41,6 @@ if [ ! -d "$DIRECTORY" ]; then
     error "Sorry, that directory can't be located. Try running the script again."
 else
     echo "continuing."
-    break
 fi
 
 # install dependencies with apt
