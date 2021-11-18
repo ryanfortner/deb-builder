@@ -86,7 +86,7 @@ read -rp "Recommends? (packages suggested to install but not required) " RECOMME
 read -rp "Conflicts? (packages that can't be alongside this package) " CONFLICTS
 read -rp "Package? (should be the same as the name in most cases) " PACKAGE
 
-mkdir -p DEBIAN
+mkdir -p DEBIAN && cd DEBIAN
 
 echo "Maintainer: ${MAINTAINER}
 Summary: ${SUMMARY}
