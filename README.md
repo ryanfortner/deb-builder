@@ -1,7 +1,7 @@
 # deb-builder
 Super simple bash script to create a deb file
 
-### Install
+### Running
 Warning, running as root may cause errors.
 
 make sure `git` and `dpkg-dev` are installed.
@@ -12,7 +12,7 @@ git clone https://github.com/ryanfortner/deb-builder.git
 cd deb-builder
 chmod +x deb-builder.sh
 
-# run
+# run deb builder
 ./deb-builder.sh
 ```
 
