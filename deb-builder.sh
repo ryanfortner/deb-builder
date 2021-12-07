@@ -83,6 +83,7 @@ read -rp "License? (example: gpl) " LICENSE
 read -rp "Architecture? (armhf, all, arm64, etc.) " ARCHA
 read -rp "Provides? (what packages does this package provide) " PROVIDES
 read -rp "Priority? (usually 'optional') " PRIORITY
+read -rp "Section? (example: unknown, utils, etc.) " SECTION
 read -rp "Depends? (packages needed to install/run) " DEPENDSAB
 read -rp "Recommends? (packages suggested to install but not required) " RECOMMENDS
 read -rp "Conflicts? (packages that can't be alongside this package) " CONFLICTS
