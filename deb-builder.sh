@@ -135,6 +135,6 @@ read -rp "Name of the deb file? (ex: helloworld_0.1.0_armhf.deb) " DEBNAME
 echo "Your deb will be built at $DEBDIR"
 
 echo "Building deb..."
-dpkg-deb --build $NOWDAY/ ${DEBNAME} || error "Failed to create "
+dpkg-deb --build $NOWDAY/ ${DEBNAME} || error "Failed to create ${DEBNAME}"
 
 echo "Done!"
