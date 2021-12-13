@@ -1,5 +1,5 @@
 # deb-builder
-Super simple bash script to create a deb file
+Super simple bash script to create Debian packages
 
 ### Running
 Warning, running as root may cause errors.
