@@ -109,8 +109,7 @@ Package: ${PACKAGE}" > control
 sudo chmod 775 control || error "Failed to change control file permissions!"
 
 # go two directories up
-cd ..
-cd ..
+cd ../..
 
 echo "Last chance: review the contents of the folder. If it's not correct, answer 'n'. If the contents are correct, answer 'y'."
 echo ""
