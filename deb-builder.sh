@@ -36,7 +36,7 @@ fi
 mkdir -p $DATA_DIR
 
 # ask user to input the directory with the files. 
-# the directory should not cointain a DEBIAN folder or a control file, only the files desired for the deb.
+# the directory should not cointain a DEBIAN folder or a control file, only the files that are to be installed into the system and their target directory.
 read -rp "Enter the full directory with the desired contents for the deb: " DIRECTORYB
 if [ ! -d "$DIRECTORYB" ]; then
     error "Sorry, that directory can't be located. Try running the script again."
